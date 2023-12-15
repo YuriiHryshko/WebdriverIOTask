@@ -26,7 +26,7 @@ describe('Invalid Settings Page testing', () => {
     it('Saving empty "Last Name" field', async() => {
         await settingsPage.doubleClickLastNameField();
         //await browser.keys(['Shift', 'Home', 'Delete']);
-        await browser.keys(['Ctrl', 'a', 'x']);
+        await browser.keys([Key.Ctrl, 'a', 'x'])
         expect(await settingsPage.getLastNameFieldValue()).toEqual("");
         expect(await settingsPage.getLastNameHelperText()).toEqual("Enter a last name");
         expect(await settingsPage.saveBtn.isEnabled()).toBe(false);
@@ -35,7 +35,7 @@ describe('Invalid Settings Page testing', () => {
     it('Saving empty "Email" field', async() => {
         await settingsPage.doubleClickEmailField();
         //await browser.keys(['Shift', 'Home', 'Delete']);
-        await browser.keys(['Ctrl', 'a', 'x']);
+        await browser.keys([Key.Ctrl, 'a', 'x'])
         expect(await settingsPage.getEmailFieldValue()).toEqual("");
         expect(await settingsPage.getEmailHelperText()).toEqual("Enter an email address");
         expect(await settingsPage.saveBtn.isEnabled()).toBe(false);
