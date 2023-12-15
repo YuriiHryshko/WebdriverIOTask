@@ -19,7 +19,7 @@
         "test:suite:settings": "cross-env ENV=http://localhost:3000 wdio run ./wdio.conf.js --suite settings",
         "test:chrome": "cross-env ENV=http://localhost:3000 wdio run ./configs/wdio.chrome.conf.js",
         "test:firefox": "cross-env ENV=http://localhost:3000 wdio run ./configs/wdio.firefox.conf.js",
-        "report-generate": "npx allure generate allure-results --clean",
-        "report-open": "npx allure open allure-report"
+        "report:generate": "npx allure generate allure-results --clean",
+        "report:open": "npx allure open allure-report"
     }
 }
