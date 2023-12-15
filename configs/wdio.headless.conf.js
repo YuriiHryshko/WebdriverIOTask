@@ -22,10 +22,7 @@ export const config = {
     maxInstances: 10,
 
     capabilities: [{
-        browserName: 'chrome',
-        'goog:chromeOptions': {
-            args: ['--headless', '--disable-gpu']
-        }
+        browserName: 'chrome'
     }],
 
     logLevel: 'warn',
