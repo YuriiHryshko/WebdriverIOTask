@@ -1,0 +1,35 @@
+name: End-to-end tests
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      LOGIN_USERNAME: Katharina_Bernier
+      LOGIN_PASSWORD: s3cret
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Clone Repository
+        run: git clone https://github.com/cypress-io/cypress-realworld-app.git
+
+      - name: Install Dependencies and Run Server
+        run: |
+          cd cypress-realworld-app
+          yarn install
+          yarn dev & sleep 20 && curl http://localhost:3000
+
+      - name: Install Dependencies and Run Tests
+        run: |
+          npm install
+          npm run test
+          npm run report:generate
+
+      - name: Deploy report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-report
