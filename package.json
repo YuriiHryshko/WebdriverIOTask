@@ -1,6 +1,6 @@
 {
     "name": "task7",
-    "type": "module",
+    "type": "commonjs",
     "devDependencies": {
         "@wdio/allure-reporter": "^8.24.12",
         "@wdio/cli": "^8.26.0",
