@@ -10,17 +10,14 @@ exports.config = {
         '../test/specs/**/*.js'
     ],
     suites: {
+        home: [
+            '../test/specs/home.spec.js',
+        ],
         login: [
-            '../test/specs/login.e2e.js',
+            '../test/specs/login.spec.js',
         ],
-        account: [
-            '../test/specs/account.e2e.js',
-        ],
-        bank_account: [
-            '../test/specs/bank_account.e2e.js',
-        ],
-        transaction: [
-            '../test/specs/transaction.e2e.js',
+        settings: [
+            '../test/specs/settings.js',
         ],
     },
 
