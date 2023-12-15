@@ -1,0 +1,24 @@
+{
+    "name": "task7",
+    "type": "module",
+    "devDependencies": {
+        "@wdio/allure-reporter": "^8.24.12",
+        "@wdio/cli": "^8.26.0",
+        "@wdio/local-runner": "^8.26.0",
+        "@wdio/mocha-framework": "^8.24.12",
+        "@wdio/spec-reporter": "^8.24.12",
+        "allure-commandline": "^2.25.0",
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.3.1"
+    },
+    "scripts": {
+        "test": "cross-env ENV=http://localhost:3000 wdio run ./wdio.conf.js",
+        "test:suite:home": "cross-env ENV=http://localhost:3000 wdio run ./wdio.conf.js --suite home",
+        "test:suite:login": "cross-env ENV=http://localhost:3000 wdio run ./wdio.conf.js --suite login",
+        "test:suite:settings": "cross-env ENV=http://localhost:3000 wdio run ./wdio.conf.js --suite settings",
+        "test:chrome": "cross-env ENV=http://localhost:3000 wdio run ./configs/wdio.chrome.conf.js",
+        "test:firefox": "cross-env ENV=http://localhost:3000 wdio run ./configs/wdio.firefox.conf.js",
+        "report-generate": "npx allure generate allure-results --clean",
+        "report-open": "npx allure open allure-report"
+    }
+}
