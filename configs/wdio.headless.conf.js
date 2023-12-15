@@ -1,9 +1,7 @@
-const dotenv = require('dotenv');
+import { config as sharedConfig } from '../wdio.conf.js';
 
-dotenv.config();
-
-exports.config = {
-
+export const config = {
+    ...sharedConfig,
     runner: 'local',
 
     specs: [
@@ -56,4 +54,4 @@ exports.config = {
         ui: 'bdd',
         timeout: 60000
     }
-}
+};
