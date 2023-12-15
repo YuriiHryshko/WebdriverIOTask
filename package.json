@@ -13,6 +13,7 @@
     },
     "scripts": {
         "test": "cross-env ENV=http://localhost:3000 wdio run ./wdio.conf.js",
+        "test:headless": "wdio run configs/wdio.headless.conf.js",
         "test:suite:home": "cross-env ENV=http://localhost:3000 wdio run ./wdio.conf.js --suite home",
         "test:suite:login": "cross-env ENV=http://localhost:3000 wdio run ./wdio.conf.js --suite login",
         "test:suite:settings": "cross-env ENV=http://localhost:3000 wdio run ./wdio.conf.js --suite settings",

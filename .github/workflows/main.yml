@@ -28,7 +28,7 @@ jobs:
       - name: Install Dependencies and Run Tests
         run: |
           npm install
-          npm run test
+          npm run test:headless
           npm run report:generate
 
       - name: Deploy report to GitHub Pages
