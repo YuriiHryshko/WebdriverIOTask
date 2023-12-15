@@ -24,7 +24,7 @@ export const config = {
     capabilities: [{
         browserName: 'chrome',
         'goog:chromeOptions': {
-            args: ['--disable-gpu']
+            args: ['--headless']
         }
     }],
 
