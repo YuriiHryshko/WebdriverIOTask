@@ -16,7 +16,7 @@ describe('Invalid Settings Page testing', () => {
     it('Saving empty "First Name" field', async() => {
         await settingsPage.doubleClickFirstNameField();
         //await browser.keys(['Shift', 'Home', 'Delete']);
-        await browser.keys([Key.Ctrl, 'a', 'x'])
+        await browser.keys(['Ctrl', 'a', 'x']);
         expect(await settingsPage.getFirstNameFieldValue()).toEqual("");
         expect(await settingsPage.getFirstNameHelperText()).toEqual("Enter a first name");
         expect(await settingsPage.saveBtn.isEnabled()).toBe(false);
@@ -25,7 +25,7 @@ describe('Invalid Settings Page testing', () => {
     it('Saving empty "Last Name" field', async() => {
         await settingsPage.doubleClickLastNameField();
         //await browser.keys(['Shift', 'Home', 'Delete']);
-        await browser.keys([Key.Ctrl, 'a', 'x'])
+        await browser.keys(['Ctrl', 'a', 'x']);
         expect(await settingsPage.getLastNameFieldValue()).toEqual("");
         expect(await settingsPage.getLastNameHelperText()).toEqual("Enter a last name");
         expect(await settingsPage.saveBtn.isEnabled()).toBe(false);
@@ -34,7 +34,7 @@ describe('Invalid Settings Page testing', () => {
     it('Saving empty "Email" field', async() => {
         await settingsPage.doubleClickEmailField();
         //await browser.keys(['Shift', 'Home', 'Delete']);
-        await browser.keys([Key.Ctrl, 'a', 'x'])
+        await browser.keys(['Ctrl', 'a', 'x']);
         expect(await settingsPage.getEmailFieldValue()).toEqual("");
         expect(await settingsPage.getEmailHelperText()).toEqual("Enter an email address");
         expect(await settingsPage.saveBtn.isEnabled()).toBe(false);
@@ -43,7 +43,7 @@ describe('Invalid Settings Page testing', () => {
     it('Saving empty "Phone Number" field', async() => {
         await settingsPage.doubleClickPhoneNumberField();
         //await browser.keys(['Shift', 'Home', 'Delete']);
-        await browser.keys([Key.Ctrl, 'a', 'x'])
+        await browser.keys(['Ctrl', 'a', 'x']);
         expect(await settingsPage.getPhoneNumberFieldValue()).toEqual("");
         expect(await settingsPage.getPhoneNumberHelperText()).toEqual("Enter a phone number");
         expect(await settingsPage.saveBtn.isEnabled()).toBe(false);
@@ -64,7 +64,7 @@ describe('Valid Settings Page testing', () => {
     it('Saving "First Name" field with new data', async() => {
         await settingsPage.doubleClickFirstNameField();
         //await browser.keys(['Shift', 'Home', 'Delete']);
-        await browser.keys([Key.Ctrl, 'a', 'x'])
+        await browser.keys(['Ctrl', 'a', 'x']);
         await settingsPage.setInputFirstName("ahahah");
         expect(await settingsPage.getFirstNameFieldValue()).toEqual("ahahah");
 
@@ -75,7 +75,7 @@ describe('Valid Settings Page testing', () => {
     it('Saving "Last Name" field with new data', async() => {
         await settingsPage.doubleClickLastNameField();
         //await browser.keys(['Shift', 'Home', 'Delete']);
-        await browser.keys([Key.Ctrl, 'a', 'x'])
+        await browser.keys(['Ctrl', 'a', 'x']);
         await settingsPage.setInputLastName("Dom");
         expect(await settingsPage.getLastNameFieldValue()).toEqual("Dom");
 
